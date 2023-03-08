@@ -1,10 +1,12 @@
-#include <iostream>	
-#include "CDate.h"
+#include "CShift.h"
 
 using namespace std;
 
 int main() {
-	CDate data1(28,2,2000);
-	data1.printDate();
+
+	CDate dataPiquete(17, 1, 2023);
+	CShift piquete("Jorge", dataPiquete);
+	piquete.printNextShift();
+	dataPiquete.setToday();
 	return 0;
 }
