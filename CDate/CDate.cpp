@@ -1,9 +1,14 @@
 #include "CDate.h"
 
 CDate::CDate() {
+	/*
 	this->day = 1;
 	this->month = 1;
 	this->year = 2020;
+	setDayOfTheWeek();
+	*/
+	setToday();
+	setDayOfTheWeek();
 }
 CDate::CDate(int day, int month, int year) {
 	setMonth(month);
@@ -132,11 +137,11 @@ unsigned long int CDate::daysBetweenDates(CDate data1, CDate data2){
 	unsigned int result = std::abs(static_cast<int>(total_days1) - static_cast<int>(total_days2));
 	return result;
 }
-CDate CDate::setToday(){
-	std::time_t date = std::time(nullptr);
-	// Converter a data em uma string legível
-	char data_str[100];
-	CDate C_date(1,1,2000);
-//	std::strftime(data_str, sizeof(data_str), "%d/%m/%Y", std::localtime(&date));
-	return C_date;
+void CDate::setToday(){
+	std::time_t t = std::time(nullptr);
+	std::tm tm = *std::localtime(&t);
+	//std::cout << tm.tm_mday << "/" << (tm.tm_mon + 1) << "/" << (tm.tm_year + 1900) << std::endl;
+	this->day = tm.tm_mday;
+	this->month = tm.tm_mon + 1;
+	this->year = tm.tm_year + 1900;
 }

@@ -1,12 +1,11 @@
 #include "CShift.h"
+#define _CRT_SECURE_NO_WARNINGS
 
 using namespace std;
 
 int main() {
-
-	CDate dataPiquete(17, 1, 2023);
-	CShift piquete("Jorge", dataPiquete);
-	piquete.printNextShift();
-	dataPiquete.setToday();
+	CDate hoje(12,5,2000);
 	return 0;
 }
+
+	

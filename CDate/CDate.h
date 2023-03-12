@@ -23,7 +23,7 @@ class CDate{
 		void setYear(int);
 		unsigned long int daysBetweenDates(CDate, CDate);
 		void setDayOfTheWeek();
-		CDate setToday();
+		void setToday();										//sets de date as this day 
 	private:
 		std::string day_of_the_week;
 		unsigned int day, month, year;
