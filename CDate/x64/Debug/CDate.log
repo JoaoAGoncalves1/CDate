@@ -1,4 +1,9 @@
-﻿  main.cpp
-C:\Users\joaoa\Desktop\Universidade\Projetos Cpp\CDate\CDate\main.cpp(2,1): warning C4005: '_CRT_SECURE_NO_WARNINGS': redefinição de macro
-C:\Users\joaoa\Desktop\Universidade\Projetos Cpp\CDate\CDate\main.cpp(2,1): message : '_CRT_SECURE_NO_WARNINGS' declarado anteriormente na linha de comando
-  CDate.vcxproj -> C:\Users\joaoa\Desktop\Universidade\Projetos Cpp\CDate\x64\Debug\CDate.exe
+﻿  CShift.cpp
+C:\Users\joaoa\Desktop\Universidade\Projetos Cpp\CDate\CDate\CShift.cpp(19,26): error C2059: erro de sintaxe: ']'
+  main.cpp
+  Shifts_Def.cpp
+C:\Users\joaoa\Desktop\Universidade\Projetos Cpp\CDate\CDate\Shifts_Def.cpp(7,3): error C2679: '=' binário : nenhum operador encontrado que receba um operando de lado direito do tipo 'void' (ou não há conversão aceitável)
+C:\Users\joaoa\Desktop\Universidade\Projetos Cpp\CDate\CDate\CDate.h(32,1): message : poderia ser 'CDate &CDate::operator =(CDate &&)'
+C:\Users\joaoa\Desktop\Universidade\Projetos Cpp\CDate\CDate\CDate.h(32,1): message : ou       'CDate &CDate::operator =(const CDate &)'
+C:\Users\joaoa\Desktop\Universidade\Projetos Cpp\CDate\CDate\Shifts_Def.cpp(7,3): message : ao tentar corresponder a lista de argumentos '(CDate, void)'
+  Gerando Código...

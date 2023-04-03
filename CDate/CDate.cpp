@@ -137,6 +137,46 @@ unsigned long int CDate::daysBetweenDates(CDate data1, CDate data2){
 	unsigned int result = std::abs(static_cast<int>(total_days1) - static_cast<int>(total_days2));
 	return result;
 }
+void CDate::incrementDays(int i) {
+
+	int total_days = this->getDay();
+	int days_in_this_month = days_of_month[this->getMonth()];
+/*
+	if (this->month != 2 && (days_in_this_month >= total_days + i))
+		total_days += 6;
+	else if (this->month == 2 && checkLeapYear(this->year)) {
+	//se for ano bissexto
+		if (days_in_this_month >= total_days + i)
+			total_days += 6;
+		else
+			for (int j = 0; j < i; ) (days_of_month[])
+	}
+	else if (this->month == 2 && !checkLeapYear(this->year) && ((days_in_this_month - 1) > total_days + i)){
+	//se não for ano bissexto
+		if (days_in_this_month - 1 >= total_days + i)
+			total_days += 6;
+		
+	else if (this->month != 2 && (days_in_this_month < total_days + i)) {
+	//se dias ultrapassarem
+
+	}
+	*/
+		int aux = 0;
+		aux = total_days;
+		for (int j = 0; j < i; j++) {
+			if (days_in_this_month >= total_days) {
+				total_days++;
+				aux++;
+			}
+			else if (this->month < 12) {
+				this->month++;
+				aux = 0;
+			}
+			else
+				this->year++;
+				aux = 0;
+		}
+}
 void CDate::setToday(){
 	std::time_t t = std::time(nullptr);
 	std::tm tm = *std::localtime(&t);

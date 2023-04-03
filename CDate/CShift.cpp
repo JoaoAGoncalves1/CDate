@@ -15,6 +15,9 @@ std::string CShift::getName() {
 void CShift::setName(std::string name){
 	this->name_Of_Shift_Chief = name;
 }
+void CShift::setArrayOfShiftDates(CDate date) {
+	this->array_Shift_Dates[] = date;
+}
 void CShift::printNextShift() {
 	std::cout << "Proximo piquete dia:";
 	this->date_of_next_shift.oneLinePrintDate();

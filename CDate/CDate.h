@@ -5,6 +5,7 @@
 
 unsigned static const int days_of_month[12] = { 31,29,31,30,31,30,31,31,30,31,30,31 };
 
+
 class CDate{
 
 	public:
@@ -21,6 +22,7 @@ class CDate{
 		void setDay(int/*day*/, int/*month*/);
 		void setMonth(int);
 		void setYear(int);
+		void incrementDays(int/*number of days incrementing*/);
 		unsigned long int daysBetweenDates(CDate, CDate);
 		void setDayOfTheWeek();
 		void setToday();										//sets de date as this day 
